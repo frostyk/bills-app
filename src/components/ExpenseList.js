@@ -2,8 +2,14 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import ExpenseListItem from "./ExpenseListItem";
 import {getVisibleExpenses} from "../selectors/expenses";
+import {startSetExpenses} from "../actions/expenses";
 
 class ExpenseList extends Component {
+
+    componentDidMount() {
+        this.props.dispatch(startSetExpenses());
+    }
+
     render() {
         return (
             <div>
