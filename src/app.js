@@ -7,6 +7,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import {Provider} from "react-redux";
 import moment from "moment";
+import './firebase/firebase'
 
 const store = configureStore();
 
